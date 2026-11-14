@@ -1,7 +1,96 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI 早报 2026-11-07</title><style>body{font-family:system-ui,sans-serif;max-width:680px;margin:2em auto;padding:0 1em;line-height:1.7}</style></head><body>
-<h1>AI 早报 · 2026年11月7日</h1>
-<p>自 11月6日 09:00（上海时间）以来，AtlasNote 没有发布新文章。最近一篇更新仍是 10月25日。</p>
-<h2>最近值得读的两篇</h2>
-<p><a href="https://atlasnote.ai/zh-CN/articles/felix-rieseberg-claude-workflow-goals-verification">Claude 工程负责人：别再给 AI 搬运任务</a>（10月25日 09:08 上海时间）：Felix Rieseberg 谈如何把目标、原始资料和专业工具直接交给 AI，再用独立审查与真实反馈建立信任，避免管理者成为新的瓶颈。</p>
-<p><a href="https://atlasnote.ai/zh-CN/articles/sundar-pichai-gemini-4-compute-agents">皮查伊谈 Gemini 4：模型跑得越快，算力越要提前准备</a>（10月23日 09:50 上海时间）：从 Gemini 4 Argon 的发布取舍，到个人智能体、DeepMind 调整和太空计算，解释 Google 如何平衡快速进步的模型与有限算力。</p>
-</body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 早报 · 2026-11-14</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --card: #1a2332;
+    --text: #e7ecf3;
+    --muted: #8b9bb4;
+    --accent: #5b9dff;
+    --border: #2a3548;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 24px 16px 64px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+  }
+  .date { color: var(--muted); font-size: 0.95rem; margin: 0 0 16px; }
+  .lead { font-size: 1.05rem; color: #c5d0e0; margin: 0; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 22px 18px;
+    margin-bottom: 20px;
+  }
+  .card h2 { font-size: 1.15rem; margin: 0 0 8px; line-height: 1.4; }
+  .card h2 a { color: var(--text); text-decoration: none; }
+  .card h2 a:hover { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 0.85rem; margin: 0 0 14px; }
+  .card p { margin: 0 0 12px; }
+  .card p:last-child { margin-bottom: 0; }
+  a { color: var(--accent); }
+  .cta { margin-top: 16px !important; }
+  .cta a {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+  }
+  .cta a:hover { background: rgba(91,157,255,0.12); }
+  footer {
+    margin-top: 32px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>AI 早报</h1>
+      <p class="date">2026-11-14 · 上海时间</p>
+      <p class="lead">今早窗口内（自昨日 09:00 起，上海时间）没有新的中文稿。下面附上目前最新的两篇，方便回看。</p>
+    </header>
+
+<section class="card">
+  <h2><a href="https://atlasnote.ai/zh-CN/articles/tulsee-doshi-ai-product-judgment-evals" target="_blank" rel="noopener">AI 让产品更容易做出来，产品经理该靠什么创造价值？</a></h2>
+  <p class="meta">发布时间：2026-11-09 11:45（上海时间） · 来源：Atlasnote</p>
+  <p>Google 前沿模型产品负责人 Tulsee Doshi 谈到，当做产品变得更容易，稀缺的是选择、标准和共识。他建议从少量提示词起步做评测，用 60／20／20 规划产品组合，再用原型、数据与判断去支撑需求。</p>
+  <p class="cta"><a href="https://atlasnote.ai/zh-CN/articles/tulsee-doshi-ai-product-judgment-evals" target="_blank" rel="noopener">阅读全文 →</a></p>
+</section>
+
+<section class="card">
+  <h2><a href="https://atlasnote.ai/zh-CN/articles/multi-agent-api-key-management" target="_blank" rel="noopener">多 Agent 的 API Key 管理方法</a></h2>
+  <p class="meta">发布时间：2026-11-07 13:48（上海时间） · 来源：Atlasnote</p>
+  <p>一份登记表、一个调用入口，让多个 Agent 按用途复用凭证，减少重复输入和明文回显。</p>
+  <p class="cta"><a href="https://atlasnote.ai/zh-CN/articles/multi-agent-api-key-management" target="_blank" rel="noopener">阅读全文 →</a></p>
+</section>
+
+    <footer>内容来源：Atlasnote.ai · 今日无新稿</footer>
+  </div>
+</body>
+</html>
