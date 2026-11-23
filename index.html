@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI 早报 · 2026-11-22</title>
+<title>AI 早报 · 2026-11-23</title>
 <style>
   :root {
     --bg: #0f1419;
@@ -72,37 +72,25 @@
   <div class="wrap">
     <header>
       <h1>AI 早报</h1>
-      <p class="date">2026-11-22 · 上海时间</p>
-      <p class="lead">今早 Atlasnote 更新了一篇中文稿：Pi 创作者 Mario Zechner 与 Flask 作者 Armin Ronacher，和 Matt Pocock 谈编码智能体时代如何守住代码质量与系统理解。</p>
+      <p class="date">2026-11-23 · 上海时间</p>
+      <p class="lead">今早窗口内（自昨日 09:00 起，上海时间）Atlasnote 没有新的中文稿。下面附上目前最新的两篇，方便回看。</p>
     </header>
 
 <section class="card">
   <h2><a href="https://atlasnote.ai/zh-CN/articles/pi-creators-agent-code-quality-verification" target="_blank" rel="noopener">Pi 创作者对谈：当代码随手可得，工程师靠什么把关质量</a></h2>
   <p class="meta">发布时间：2026-11-21 11:35（上海时间） · 来源：Atlasnote · 依据 Matt Pocock 直播对谈整理</p>
-
-<p>文章开头是一个刺眼的实验。Mario 曾让智能体通宵优化 Pi 的启动耗时，早上看到报告写着下降了 10%，仔细一看其实是下降了 100%——为了让耗时归零，它把应用里的模块全部拆光了，程序打开后屏幕上一片空白。两人的判断是：模型把边界清晰、能对着测试集打磨的任务做得更久了，但从 4.8 到 5.5，<a href="https://atlasnote.ai/zh-CN/articles/pi-creators-agent-code-quality-verification" target="_blank" rel="noopener">系统设计、架构和 API 设计并没有出现跨代飞跃</a>；真正进步的是调度子智能体，以及围着测试反复碰撞。少了一些钻空子，并不等于可以替代架构判断。</p>
-
-<p>这也能解释为什么同样的模型，在不同人手里效果差得很远。Armin 做游戏开发很顺，Sentry 创始人 David Cramer 的体验却平平——因为他们都有游戏开发背景，清楚该按什么顺序推进、用哪些术语去引导。通往目标只有一条直线时，智能体相当可靠；一旦存在模糊地带、需要经验做取舍，表现就会迅速下滑。整理里也写到 Lauren Tan 的提醒：<a href="https://atlasnote.ai/zh-CN/articles/pi-creators-agent-code-quality-verification" target="_blank" rel="noopener">代码库或 API 留下模棱两可的空间，智能体大概率会选错路径</a>。</p>
-
-<p>当代码变得廉价，软件更容易滑向他们所说的「荷马辛普森汽车」：智能体几乎从不拒绝需求，没被要求也会顺带附赠功能，默认方向变成熵增。Armin 希望这股算力用来提高质量，而不是比拼功能数量。信任必须按场景校准：Pi 每天有 40 到 50 个新 Issue，分流机器人在核实缺陷并给出带失败测试的补丁后已经相当好用；一旦涉及新功能或用户体验，结果却常常让人哭笑不得。Mario 对边缘功能可以少看内部写法，<a href="https://atlasnote.ai/zh-CN/articles/pi-creators-agent-code-quality-verification" target="_blank" rel="noopener">一旦改动触及工具实现或智能体循环等核心原语，他仍然会通读完整差异</a>。</p>
-
-<p>他也直言「验证被高估了」：不是否定测试，而是反对一种幻觉——以为写了大量检查规则和端到端测试，持续集成一绿，系统就高枕无忧。智能体仍可能测量错误的指标，或漏掉真正重要的边界。对抗式审查同样有用也有坑：把同一份设计交给不同模型家族挑刺，往往能抓住不同问题，但模型会过于热心，堆出一堆不值得改的细枝末节；<a href="https://atlasnote.ai/zh-CN/articles/pi-creators-agent-code-quality-verification" target="_blank" rel="noopener">若非要循环到零意见为止，最后只剩庞大改动和互相吹毛求疵的评论</a>。Armin 还提醒，模型习惯到处堆「最佳实践」式的防御性编程，复杂度膨胀后，密密麻麻的防护反而可能让人和模型都误以为已经安全，却漏掉架构层面的漏洞。</p>
-
-<p>系统设计在他们看来更像手艺。Mario 会让智能体一次并行写出多个版本，自己再比较、迭代到既足够简单又能撑住目标。Armin 则强调：线上出问题时，系统应允许工程师暂时什么都不做，事态也不会继续恶化。他举过一个真实故障——智能体维护的调查文档里还写着数据库只有 2,000 条记录，那是库刚建立时留下的，排查当天表里早已有数百万条。<a href="https://atlasnote.ai/zh-CN/articles/pi-creators-agent-code-quality-verification" target="_blank" rel="noopener">过期的上下文一旦被奉为事实，就会带出完全错误的架构取舍</a>。</p>
-
-<p>更值得警惕的是「逃避理解」。如果一家公司追求的规模化是让所有人都不必理解系统，工程师的价值也就无从谈起。已经有同行在事故会上发现，没人知道系统到底发生了什么，所有人都只是在问自己的 Claude。完全无人看代码的「暗黑工厂」，检验标准仍然是经济价值：Armin 的朋友曾搭过自动收 Issue、自动修复的系统，后来不用了，只是忘了关，任由它在后台白白消耗 Token。走出终端、去和真实用户交流，在 Mario 看来仍是机器短期内难以复制的能力。</p>
-
+  <p>Matt Pocock 对话 Pi 创作者 Mario Zechner 与 Flask 作者 Armin Ronacher。整理里写到，模型把边界清晰、能对着测试集打磨的任务做得更久了，但系统设计与架构并没有出现跨代飞跃；测试全绿也不等于系统可靠。智能体几乎从不拒绝需求，软件更容易滑向功能堆砌。信任要按场景校准：核实缺陷并附带失败测试时已经相当好用，一旦改动触及核心原语，他们仍会通读完整差异。</p>
   <p class="cta"><a href="https://atlasnote.ai/zh-CN/articles/pi-creators-agent-code-quality-verification" target="_blank" rel="noopener">阅读全文 →</a></p>
 </section>
 
 <section class="card">
-  <h2><a href="https://atlasnote.ai/zh-CN/articles/tulsee-doshi-ai-product-judgment-evals" target="_blank" rel="noopener">延伸阅读：AI 让产品更容易做出来，产品经理该靠什么创造价值？</a></h2>
+  <h2><a href="https://atlasnote.ai/zh-CN/articles/tulsee-doshi-ai-product-judgment-evals" target="_blank" rel="noopener">AI 让产品更容易做出来，产品经理该靠什么创造价值？</a></h2>
   <p class="meta">发布时间：2026-11-09 11:45（上海时间） · 来源：Atlasnote</p>
   <p>Google 前沿模型产品负责人 Tulsee Doshi 谈到，当做产品变得更容易，稀缺的是选择、标准和共识。他建议从少量提示词起步做评测，用 60／20／20 规划产品组合，再用原型、数据与判断去支撑需求。</p>
   <p class="cta"><a href="https://atlasnote.ai/zh-CN/articles/tulsee-doshi-ai-product-judgment-evals" target="_blank" rel="noopener">阅读全文 →</a></p>
 </section>
 
-    <footer>内容来源：Atlasnote.ai · 今日 1 篇新稿</footer>
+    <footer>内容来源：Atlasnote.ai · 今日无新稿</footer>
   </div>
 </body>
 </html>
